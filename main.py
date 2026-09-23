@@ -25,7 +25,7 @@ app.include_router(roommate.router)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:5173",
+        "https://housing-roommate-mange.netlify.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
