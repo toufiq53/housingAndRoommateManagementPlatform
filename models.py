@@ -53,17 +53,17 @@ class Room(Base):
 
 
 class Booking(Base):
-    __tablename__='booking'
+    __tablename__ = 'booking'
 
-    id=Column(Integer,primary_key=True,index=True)
-    user_id=Column(Integer,ForeignKey('users.id'))
-    property_id=Column(Integer,ForeignKey('property.id'))
-    room_id=Column(Integer,ForeignKey('room.id'))
-    room_number=Column(Integer,ForeignKey('room.room_number'))
-    status=Column(String,default='pending')
-    payment=Column(Boolean,default=False)
-    created_date=Column(DateTime,default=datetime.now)
-    move_in_date=Column(DateTime,nullable=True)
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey('users.id'))
+    property_id = Column(Integer, ForeignKey('property.id'))
+    room_id = Column(Integer, ForeignKey('room.id'))
+    room_number = Column(Integer)
+    status = Column(String, default='pending')
+    payment = Column(Boolean, default=False)
+    created_date = Column(DateTime, default=datetime.now)
+    move_in_date = Column(DateTime, nullable=True)
 
 
 
